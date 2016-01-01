@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.boxes
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.example.boxes; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.example.boxes,
+ org.eclipse.xtext.util,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.example.boxes,
+ org.xtext.example.boxes.services,
+ org.xtext.example.boxes.serializer,
+ org.xtext.example.boxes.parser.antlr,
+ org.xtext.example.boxes.parser.antlr.internal,
+ org.xtext.example.boxes.validation,
+ org.xtext.example.boxes.scoping,
+ org.xtext.example.boxes.generator,
+ org.xtext.example.boxes.formatting
