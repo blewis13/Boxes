@@ -3,9 +3,11 @@
  */
 package org.xtext.example.boxes.ui.quickfix
 
-//import org.eclipse.xtext.ui.editor.quickfix.Fix
-//import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
-//import org.eclipse.xtext.validation.Issue
+import org.xtext.example.boxes.validation.BoxesDslValidator
+import org.eclipse.xtext.validation.Issue
+import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
+import org.eclipse.xtext.ui.editor.quickfix.Fix
+import boxes.Box
 
 /**
  * Custom quickfixes.
@@ -14,13 +16,12 @@ package org.xtext.example.boxes.ui.quickfix
  */
 class BoxesDslQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider {
 
-//	@Fix(MyDslValidator::INVALID_NAME)
-//	def capitalizeName(Issue issue, IssueResolutionAcceptor acceptor) {
-//		acceptor.accept(issue, 'Capitalize name', 'Capitalize the name.', 'upcase.png') [
-//			context |
-//			val xtextDocument = context.xtextDocument
-//			val firstLetter = xtextDocument.get(issue.offset, 1)
-//			xtextDocument.replace(issue.offset, 1, firstLetter.toUpperCase)
-//		]
-//	}
+	@Fix(BoxesDslValidator::INVALID_BOX_NAME)
+	def capitalizeName(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, 'Capitalize name', "Capitalize first letter of '" + issue.data.get(0) + "'", '') 
+		[
+			element, context |
+			(element as Box).name = issue.data.get(0).toFirstUpper
+		]
+	}
 }

@@ -3,6 +3,11 @@
  */
 package org.xtext.example.boxes.validation
 
+import boxes.BoxesPackage
+import boxes.Box
+import org.eclipse.xtext.validation.Check
+import boxes.BoxInstance
+
 //import org.eclipse.xtext.validation.Check
 
 /**
@@ -12,14 +17,24 @@ package org.xtext.example.boxes.validation
  */
 class BoxesDslValidator extends AbstractBoxesDslValidator {
 
-//  public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					MyDslPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
+	public static val INVALID_BOX_NAME = 'org.xtext.example.boxes.invalidBoxName'
+	public static val INVALID_BOX_INSTANCE_INSTANCE_NAME = 'org.xtext.example.boxes.invalidBoxInstanceInstanceName'
+
+	@Check
+	def checkBoxStartsWithCapital(Box box) {
+		if (!Character.isUpperCase(box.name.charAt(0))) {
+			warning('Box names should start with a capital', 
+					BoxesPackage.Literals.BOX__NAME,
+					INVALID_BOX_NAME, box.name)
+		}
+	}
+	
+	@Check
+	def checkBoxInstanceStartsWithLower(BoxInstance boxInstance) {
+		if (!Character.isLowerCase(boxInstance.instanceName.charAt(0))) {
+			warning('BoxInstance instanceNames should start with a lowercase', 
+					BoxesPackage.Literals.BOX_INSTANCE__INSTANCE_NAME,
+					INVALID_BOX_INSTANCE_INSTANCE_NAME, boxInstance.instanceName)
+		}
+	}
 }
