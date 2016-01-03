@@ -3,6 +3,12 @@
  */
 package org.xtext.example.boxes;
 
+import org.eclipse.emf.ecore.EPackage;
+
+import boxes.BoxesPackage;
+
+import com.google.inject.Injector;
+
 /**
  * Initialization support for running Xtext languages 
  * without equinox extension registry
@@ -12,5 +18,14 @@ public class BoxesDslStandaloneSetup extends BoxesDslStandaloneSetupGenerated{
 	public static void doSetup() {
 		new BoxesDslStandaloneSetup().createInjectorAndDoEMFRegistration();
 	}
+	
+	@Override
+    public void register(Injector injector) {
+        if (!EPackage.Registry.INSTANCE.containsKey("http://boxes/1.0")) {
+            EPackage.Registry.INSTANCE.put("http://boxes/1.0", BoxesPackage.eINSTANCE);
+        }
+        super.register(injector);
+    }
+
 }
 
