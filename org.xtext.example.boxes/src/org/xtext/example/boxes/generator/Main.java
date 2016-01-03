@@ -28,7 +28,7 @@ public class Main {
 		}
 		Injector injector = new org.xtext.example.boxes.BoxesDslStandaloneSetup().createInjectorAndDoEMFRegistration();
 		Main main = injector.getInstance(Main.class);
-		main.runGenerator(args[0]);
+		main.runGenerator(args);
 	}
 	
 	@Inject 
@@ -43,23 +43,32 @@ public class Main {
 	@Inject 
 	private JavaIoFileSystemAccess fileAccess;
 
-	protected void runGenerator(String string) {
+	protected void runGenerator(String [] args) {
 		// load the resource
 		ResourceSet set = resourceSetProvider.get();
-		Resource resource = set.getResource(URI.createURI(string), true);
 		
-		// validate the resource
-		List<Issue> list = validator.validate(resource, CheckMode.ALL, CancelIndicator.NullImpl);
-		if (!list.isEmpty()) {
-			for (Issue issue : list) {
-				System.err.println(issue);
+		// Load each resource from the command line into the ResourceSet
+		for (String fileName : args) {
+			set.getResource(URI.createURI(fileName), true);
+		}
+		
+		for (Resource resource : set.getResources()) {
+			// validate the resource
+			List<Issue> list = validator.validate(resource, CheckMode.ALL, CancelIndicator.NullImpl);
+			if (!list.isEmpty()) {
+				for (Issue issue : list) {
+					System.err.println(issue);
+				}
+				return;
 			}
-			return;
 		}
 		
 		// configure and start the generator
 		fileAccess.setOutputPath("src-gen/");
-		generator.doGenerate(resource, fileAccess);
+		
+		for (Resource resource : set.getResources()) {
+			generator.doGenerate(resource, fileAccess);
+		}
 		
 		System.out.println("Code generation finished.");
 	}
