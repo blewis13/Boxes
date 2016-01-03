@@ -8,6 +8,8 @@ import org.eclipse.xtext.validation.Issue
 import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
 import org.eclipse.xtext.ui.editor.quickfix.Fix
 import boxes.Box
+import boxes.BoxInstance
+import org.eclipse.xtext.diagnostics.Diagnostic
 
 /**
  * Custom quickfixes.
@@ -24,4 +26,14 @@ class BoxesDslQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.Defa
 			(element as Box).name = issue.data.get(0).toFirstUpper
 		]
 	}
+	
+	@Fix(BoxesDslValidator::INVALID_BOX_INSTANCE_INSTANCE_NAME)
+	def lowerCaseName(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, "Lowercase name", "Lowercase first letter of '" + issue.data.get(0) + "'",'')
+		[
+			element, context |
+			(element as BoxInstance).instanceName = issue.data.get(0).toFirstLower
+		]
+	}
+
 }

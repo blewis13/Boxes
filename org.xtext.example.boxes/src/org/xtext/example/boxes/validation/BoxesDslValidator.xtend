@@ -19,6 +19,7 @@ class BoxesDslValidator extends AbstractBoxesDslValidator {
 
 	public static val INVALID_BOX_NAME = 'org.xtext.example.boxes.invalidBoxName'
 	public static val INVALID_BOX_INSTANCE_INSTANCE_NAME = 'org.xtext.example.boxes.invalidBoxInstanceInstanceName'
+	public static val INVALID_BOX_REF = 'org.xtext.example.boxes.invalidBoxRef'
 
 	@Check
 	def checkBoxStartsWithCapital(Box box) {
@@ -37,4 +38,15 @@ class BoxesDslValidator extends AbstractBoxesDslValidator {
 					INVALID_BOX_INSTANCE_INSTANCE_NAME, boxInstance.instanceName)
 		}
 	}
+	
+	@Check
+	def checkBoxSelfInstance(BoxInstance boxInstance) {
+		val box = boxInstance.eContainer as Box
+		if (boxInstance.boxRef.name.equals(box.name)) {
+			error('Boxes cannot instantiate themselves',
+				BoxesPackage.Literals.BOX_INSTANCE__BOX_REF,
+				INVALID_BOX_REF, boxInstance.boxRef.name)
+		}
+	}
+
 }
