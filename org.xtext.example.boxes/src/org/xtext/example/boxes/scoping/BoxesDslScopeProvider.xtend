@@ -22,31 +22,27 @@ import org.eclipse.xtext.scoping.impl.SimpleScope
  */
 class BoxesDslScopeProvider extends AbstractDeclarativeScopeProvider {
 	
-	def scope_Port(Connection context, EReference r) {
+	def scope_Connection_intPorts(Connection context, EReference r) {
 		val box = context.eContainer as Box
 		val descs = <IEObjectDescription>newArrayList
 		
-		// List for intPorts
-		if (r.name.equals("intPorts")) {
-			for (bi : box.boxInstances) {
-				for (x : bi.boxRef.ports) {
-					descs.add(EObjectDescription.create(QualifiedName.create(bi.instanceName, x.name), x))
-				}
-	
+		for (bi : box.boxInstances) {
+			for (x : bi.boxRef.ports) {
+				descs.add(EObjectDescription.create(QualifiedName.create(bi.instanceName, x.name), x))
 			}
-			return new SimpleScope(IScope.NULLSCOPE, descs, false)
+
 		}
-		
-		// List for extPorts
-		else if (r.name.equals("extPorts")) {
-			for (x : box.ports) {
-				descs.add(EObjectDescription.create(QualifiedName.create(x.name), x))
-			}
-			return new SimpleScope(IScope.NULLSCOPE, descs, false)
-		}
-		
-		// default
-		return IScope.NULLSCOPE
+		return new SimpleScope(IScope.NULLSCOPE, descs, false)
 	}
+		
+	def scope_Connection_extPorts(Connection context, EReference r) {
+		val box = context.eContainer as Box
+		val descs = <IEObjectDescription>newArrayList
+		
+		for (x : box.ports) {
+			descs.add(EObjectDescription.create(QualifiedName.create(x.name), x))
+		}
+		return new SimpleScope(IScope.NULLSCOPE, descs, false)
+		}
 
 }
