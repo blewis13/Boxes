@@ -4,10 +4,39 @@
 package org.xtext.example.boxes.ui.contentassist
 
 import org.xtext.example.boxes.ui.contentassist.AbstractBoxesDslProposalProvider
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.xtext.Assignment
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
+import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
+import org.eclipse.xtext.RuleCall
+import boxes.Box
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
  */
 class BoxesDslProposalProvider extends AbstractBoxesDslProposalProvider {
+	
+	override complete_Connection(EObject model, RuleCall ruleCall, 
+  		ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	
+		// call implementation of superclass
+  		super.complete_Connection(model, ruleCall, context, acceptor);
+  		
+  		val box = model as Box
+  		
+  		for (bi : box.boxInstances) {
+	  		val proposal = 
+	  		'''
+	  		// Connect all ports for «bi.instanceName»
+	  				«FOR port : bi.boxRef.ports»
+	  				Connection {intPorts («bi.instanceName +'.'+ port.name») extPorts(«port.name»)},
+	  				«ENDFOR»
+	  				
+	  		'''
+
+	  		acceptor.accept(createCompletionProposal(proposal, context));
+  		}
+
+	}
 }
