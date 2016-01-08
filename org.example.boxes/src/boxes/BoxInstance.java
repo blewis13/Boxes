@@ -2,6 +2,7 @@
  */
 package boxes;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link boxes.BoxInstance#getInstanceName <em>Instance Name</em>}</li>
  *   <li>{@link boxes.BoxInstance#getBoxRef <em>Box Ref</em>}</li>
+ *   <li>{@link boxes.BoxInstance#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,5 +75,21 @@ public interface BoxInstance extends EObject {
 	 * @generated
 	 */
 	void setBoxRef(Box value);
+
+	/**
+	 * Returns the value of the '<em><b>Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link boxes.Connection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Connections</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connections</em>' containment reference list.
+	 * @see boxes.BoxesPackage#getBoxInstance_Connections()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Connection> getConnections();
 
 } // BoxInstance

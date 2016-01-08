@@ -43,8 +43,6 @@ public class BoxesDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBoxAccess().getGroup_4_3(), "rule__Box__Group_4_3__0");
 					put(grammarAccess.getBoxAccess().getGroup_5(), "rule__Box__Group_5__0");
 					put(grammarAccess.getBoxAccess().getGroup_5_3(), "rule__Box__Group_5_3__0");
-					put(grammarAccess.getBoxAccess().getGroup_6(), "rule__Box__Group_6__0");
-					put(grammarAccess.getBoxAccess().getGroup_6_3(), "rule__Box__Group_6_3__0");
 					put(grammarAccess.getPortAccess().getGroup(), "rule__Port__Group__0");
 					put(grammarAccess.getConnectionAccess().getGroup(), "rule__Connection__Group__0");
 					put(grammarAccess.getConnectionAccess().getGroup_5(), "rule__Connection__Group_5__0");
@@ -52,6 +50,8 @@ public class BoxesDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getConnectionAccess().getGroup_7_3(), "rule__Connection__Group_7_3__0");
 					put(grammarAccess.getBoxInstanceAccess().getGroup(), "rule__BoxInstance__Group__0");
 					put(grammarAccess.getBoxInstanceAccess().getGroup_4(), "rule__BoxInstance__Group_4__0");
+					put(grammarAccess.getBoxInstanceAccess().getGroup_5(), "rule__BoxInstance__Group_5__0");
+					put(grammarAccess.getBoxInstanceAccess().getGroup_5_3(), "rule__BoxInstance__Group_5_3__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getBoxAccess().getNameAssignment_2(), "rule__Box__NameAssignment_2");
@@ -59,8 +59,6 @@ public class BoxesDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBoxAccess().getPortsAssignment_4_3_1(), "rule__Box__PortsAssignment_4_3_1");
 					put(grammarAccess.getBoxAccess().getBoxInstancesAssignment_5_2(), "rule__Box__BoxInstancesAssignment_5_2");
 					put(grammarAccess.getBoxAccess().getBoxInstancesAssignment_5_3_1(), "rule__Box__BoxInstancesAssignment_5_3_1");
-					put(grammarAccess.getBoxAccess().getConnectionsAssignment_6_2(), "rule__Box__ConnectionsAssignment_6_2");
-					put(grammarAccess.getBoxAccess().getConnectionsAssignment_6_3_1(), "rule__Box__ConnectionsAssignment_6_3_1");
 					put(grammarAccess.getPortAccess().getNameAssignment_2(), "rule__Port__NameAssignment_2");
 					put(grammarAccess.getConnectionAccess().getIntPortsAssignment_4(), "rule__Connection__IntPortsAssignment_4");
 					put(grammarAccess.getConnectionAccess().getIntPortsAssignment_5_1(), "rule__Connection__IntPortsAssignment_5_1");
@@ -68,6 +66,8 @@ public class BoxesDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getConnectionAccess().getExtPortsAssignment_7_3_1(), "rule__Connection__ExtPortsAssignment_7_3_1");
 					put(grammarAccess.getBoxInstanceAccess().getBoxRefAssignment_3(), "rule__BoxInstance__BoxRefAssignment_3");
 					put(grammarAccess.getBoxInstanceAccess().getInstanceNameAssignment_4_1(), "rule__BoxInstance__InstanceNameAssignment_4_1");
+					put(grammarAccess.getBoxInstanceAccess().getConnectionsAssignment_5_2(), "rule__BoxInstance__ConnectionsAssignment_5_2");
+					put(grammarAccess.getBoxInstanceAccess().getConnectionsAssignment_5_3_1(), "rule__BoxInstance__ConnectionsAssignment_5_3_1");
 				}
 			};
 		}

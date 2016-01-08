@@ -6,13 +6,19 @@ import boxes.Box;
 import boxes.BoxInstance;
 import boxes.BoxesPackage;
 
+import boxes.Connection;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link boxes.impl.BoxInstanceImpl#getInstanceName <em>Instance Name</em>}</li>
  *   <li>{@link boxes.impl.BoxInstanceImpl#getBoxRef <em>Box Ref</em>}</li>
+ *   <li>{@link boxes.impl.BoxInstanceImpl#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,6 +65,16 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 	 * @ordered
 	 */
 	protected Box boxRef;
+
+	/**
+	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnections()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Connection> connections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,6 +159,32 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Connection> getConnections() {
+		if (connections == null) {
+			connections = new EObjectContainmentEList<Connection>(Connection.class, this, BoxesPackage.BOX_INSTANCE__CONNECTIONS);
+		}
+		return connections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BoxesPackage.BOX_INSTANCE__CONNECTIONS:
+				return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -150,6 +193,8 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 			case BoxesPackage.BOX_INSTANCE__BOX_REF:
 				if (resolve) return getBoxRef();
 				return basicGetBoxRef();
+			case BoxesPackage.BOX_INSTANCE__CONNECTIONS:
+				return getConnections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,6 +204,7 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -167,6 +213,10 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 				return;
 			case BoxesPackage.BOX_INSTANCE__BOX_REF:
 				setBoxRef((Box)newValue);
+				return;
+			case BoxesPackage.BOX_INSTANCE__CONNECTIONS:
+				getConnections().clear();
+				getConnections().addAll((Collection<? extends Connection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,6 +236,9 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 			case BoxesPackage.BOX_INSTANCE__BOX_REF:
 				setBoxRef((Box)null);
 				return;
+			case BoxesPackage.BOX_INSTANCE__CONNECTIONS:
+				getConnections().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -202,6 +255,8 @@ public class BoxInstanceImpl extends MinimalEObjectImpl.Container implements Box
 				return INSTANCE_NAME_EDEFAULT == null ? instanceName != null : !INSTANCE_NAME_EDEFAULT.equals(instanceName);
 			case BoxesPackage.BOX_INSTANCE__BOX_REF:
 				return boxRef != null;
+			case BoxesPackage.BOX_INSTANCE__CONNECTIONS:
+				return connections != null && !connections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -11,7 +11,6 @@ Box returns Box:
 	'{'
 		('ports' '{' ports+=Port ( "," ports+=Port)* '}' )?
 		('boxInstances' '{' boxInstances+=BoxInstance ( "," boxInstances+=BoxInstance)* '}' )?
-		('connections' '{' connections+=Connection ( "," connections+=Connection)* '}' )?
 	'}';
 
 EString returns ecore::EString:
@@ -34,6 +33,7 @@ BoxInstance returns BoxInstance:
 	'{'
 		'boxRef' boxRef=[Box|QualifiedName]
 		 ('instanceName' instanceName=EString)?
+		 ('connections' '{' connections+=Connection ( "," connections+=Connection)* '}' )?
 	'}';
 
 QualifiedName:

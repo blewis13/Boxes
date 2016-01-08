@@ -10,6 +10,7 @@ import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
 import org.eclipse.xtext.RuleCall
 import boxes.Box
+import boxes.BoxInstance
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
@@ -23,14 +24,13 @@ class BoxesDslProposalProvider extends AbstractBoxesDslProposalProvider {
 		// call implementation of superclass
   		super.complete_Connection(model, ruleCall, context, acceptor);
   		
-  		val box = model as Box
+  		val boxInstance = model as BoxInstance
   		
-  		for (bi : box.boxInstances) {
 	  		val proposal = 
 	  		'''
-	  		// Connect all ports for «bi.instanceName»
-	  				«FOR port : bi.boxRef.ports»
-	  				Connection {intPorts («bi.instanceName +'.'+ port.name») extPorts(«port.name»)},
+	  		// Connect all ports for «boxInstance.instanceName»
+	  				«FOR port : boxInstance.boxRef.ports»
+	  				Connection {intPorts («port.name») extPorts(«port.name»)},
 	  				«ENDFOR»
 	  				
 	  		'''
@@ -38,5 +38,5 @@ class BoxesDslProposalProvider extends AbstractBoxesDslProposalProvider {
 	  		acceptor.accept(createCompletionProposal(proposal, context));
   		}
 
-	}
 }
+

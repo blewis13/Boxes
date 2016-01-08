@@ -46,27 +46,15 @@ public class BoxesDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cBoxInstancesAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
 		private final RuleCall cBoxInstancesBoxInstanceParserRuleCall_5_3_1_0 = (RuleCall)cBoxInstancesAssignment_5_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cConnectionsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Assignment cConnectionsAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final RuleCall cConnectionsConnectionParserRuleCall_6_2_0 = (RuleCall)cConnectionsAssignment_6_2.eContents().get(0);
-		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
-		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
-		private final Assignment cConnectionsAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
-		private final RuleCall cConnectionsConnectionParserRuleCall_6_3_1_0 = (RuleCall)cConnectionsAssignment_6_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Box:
 		//	{Box} "Box" name=EString "{" ("ports" "{" ports+=Port ("," ports+=Port)* "}")? ("boxInstances" "{"
-		//	boxInstances+=BoxInstance ("," boxInstances+=BoxInstance)* "}")? ("connections" "{" connections+=Connection (","
-		//	connections+=Connection)* "}")? "}";
+		//	boxInstances+=BoxInstance ("," boxInstances+=BoxInstance)* "}")? "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//{Box} "Box" name=EString "{" ("ports" "{" ports+=Port ("," ports+=Port)* "}")? ("boxInstances" "{"
-		//boxInstances+=BoxInstance ("," boxInstances+=BoxInstance)* "}")? ("connections" "{" connections+=Connection (","
-		//connections+=Connection)* "}")? "}"
+		//boxInstances+=BoxInstance ("," boxInstances+=BoxInstance)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Box}
@@ -144,38 +132,8 @@ public class BoxesDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
 
-		//("connections" "{" connections+=Connection ("," connections+=Connection)* "}")?
-		public Group getGroup_6() { return cGroup_6; }
-
-		//"connections"
-		public Keyword getConnectionsKeyword_6_0() { return cConnectionsKeyword_6_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
-
-		//connections+=Connection
-		public Assignment getConnectionsAssignment_6_2() { return cConnectionsAssignment_6_2; }
-
-		//Connection
-		public RuleCall getConnectionsConnectionParserRuleCall_6_2_0() { return cConnectionsConnectionParserRuleCall_6_2_0; }
-
-		//("," connections+=Connection)*
-		public Group getGroup_6_3() { return cGroup_6_3; }
-
-		//","
-		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
-
-		//connections+=Connection
-		public Assignment getConnectionsAssignment_6_3_1() { return cConnectionsAssignment_6_3_1; }
-
-		//Connection
-		public RuleCall getConnectionsConnectionParserRuleCall_6_3_1_0() { return cConnectionsConnectionParserRuleCall_6_3_1_0; }
-
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class EStringElements extends AbstractParserRuleElementFinder {
@@ -357,13 +315,25 @@ public class BoxesDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cInstanceNameKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cInstanceNameAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cInstanceNameEStringParserRuleCall_4_1_0 = (RuleCall)cInstanceNameAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cConnectionsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cConnectionsAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cConnectionsConnectionParserRuleCall_5_2_0 = (RuleCall)cConnectionsAssignment_5_2.eContents().get(0);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Assignment cConnectionsAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final RuleCall cConnectionsConnectionParserRuleCall_5_3_1_0 = (RuleCall)cConnectionsAssignment_5_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//BoxInstance:
-		//	"BoxInstance" "{" "boxRef" boxRef=[Box|QualifiedName] ("instanceName" instanceName=EString)? "}";
+		//	"BoxInstance" "{" "boxRef" boxRef=[Box|QualifiedName] ("instanceName" instanceName=EString)? ("connections" "{"
+		//	connections+=Connection ("," connections+=Connection)* "}")? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"BoxInstance" "{" "boxRef" boxRef=[Box|QualifiedName] ("instanceName" instanceName=EString)? "}"
+		//"BoxInstance" "{" "boxRef" boxRef=[Box|QualifiedName] ("instanceName" instanceName=EString)? ("connections" "{"
+		//connections+=Connection ("," connections+=Connection)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"BoxInstance"
@@ -396,8 +366,38 @@ public class BoxesDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getInstanceNameEStringParserRuleCall_4_1_0() { return cInstanceNameEStringParserRuleCall_4_1_0; }
 
+		//("connections" "{" connections+=Connection ("," connections+=Connection)* "}")?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"connections"
+		public Keyword getConnectionsKeyword_5_0() { return cConnectionsKeyword_5_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
+
+		//connections+=Connection
+		public Assignment getConnectionsAssignment_5_2() { return cConnectionsAssignment_5_2; }
+
+		//Connection
+		public RuleCall getConnectionsConnectionParserRuleCall_5_2_0() { return cConnectionsConnectionParserRuleCall_5_2_0; }
+
+		//("," connections+=Connection)*
+		public Group getGroup_5_3() { return cGroup_5_3; }
+
+		//","
+		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
+
+		//connections+=Connection
+		public Assignment getConnectionsAssignment_5_3_1() { return cConnectionsAssignment_5_3_1; }
+
+		//Connection
+		public RuleCall getConnectionsConnectionParserRuleCall_5_3_1_0() { return cConnectionsConnectionParserRuleCall_5_3_1_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
@@ -482,8 +482,7 @@ public class BoxesDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Box:
 	//	{Box} "Box" name=EString "{" ("ports" "{" ports+=Port ("," ports+=Port)* "}")? ("boxInstances" "{"
-	//	boxInstances+=BoxInstance ("," boxInstances+=BoxInstance)* "}")? ("connections" "{" connections+=Connection (","
-	//	connections+=Connection)* "}")? "}";
+	//	boxInstances+=BoxInstance ("," boxInstances+=BoxInstance)* "}")? "}";
 	public BoxElements getBoxAccess() {
 		return pBox;
 	}
@@ -524,7 +523,8 @@ public class BoxesDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BoxInstance:
-	//	"BoxInstance" "{" "boxRef" boxRef=[Box|QualifiedName] ("instanceName" instanceName=EString)? "}";
+	//	"BoxInstance" "{" "boxRef" boxRef=[Box|QualifiedName] ("instanceName" instanceName=EString)? ("connections" "{"
+	//	connections+=Connection ("," connections+=Connection)* "}")? "}";
 	public BoxInstanceElements getBoxInstanceAccess() {
 		return pBoxInstance;
 	}

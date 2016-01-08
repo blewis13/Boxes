@@ -5,8 +5,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ports" upperBound="-1"
         eType="#//Port" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
-        eType="#//Connection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="boxInstances" upperBound="-1"
         eType="#//BoxInstance" containment="true"/>
   </eClassifiers>
@@ -23,5 +21,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="boxRef" lowerBound="1"
         eType="#//Box"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//Connection" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

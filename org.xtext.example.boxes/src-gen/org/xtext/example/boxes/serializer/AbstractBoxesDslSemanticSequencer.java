@@ -50,7 +50,7 @@ public abstract class AbstractBoxesDslSemanticSequencer extends AbstractDelegati
 	
 	/**
 	 * Constraint:
-	 *     (boxRef=[Box|QualifiedName] instanceName=EString?)
+	 *     (boxRef=[Box|QualifiedName] instanceName=EString? (connections+=Connection connections+=Connection*)?)
 	 */
 	protected void sequence_BoxInstance(EObject context, BoxInstance semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -59,12 +59,7 @@ public abstract class AbstractBoxesDslSemanticSequencer extends AbstractDelegati
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         name=EString 
-	 *         (ports+=Port ports+=Port*)? 
-	 *         (boxInstances+=BoxInstance boxInstances+=BoxInstance*)? 
-	 *         (connections+=Connection connections+=Connection*)?
-	 *     )
+	 *     (name=EString (ports+=Port ports+=Port*)? (boxInstances+=BoxInstance boxInstances+=BoxInstance*)?)
 	 */
 	protected void sequence_Box(EObject context, Box semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

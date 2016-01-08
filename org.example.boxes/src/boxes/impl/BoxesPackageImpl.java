@@ -144,17 +144,8 @@ public class BoxesPackageImpl extends EPackageImpl implements BoxesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBox_Connections() {
-		return (EReference)boxEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getBox_BoxInstances() {
-		return (EReference)boxEClass.getEStructuralFeatures().get(3);
+		return (EReference)boxEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -234,6 +225,15 @@ public class BoxesPackageImpl extends EPackageImpl implements BoxesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBoxInstance_Connections() {
+		return (EReference)boxInstanceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BoxesFactory getBoxesFactory() {
 		return (BoxesFactory)getEFactoryInstance();
 	}
@@ -260,7 +260,6 @@ public class BoxesPackageImpl extends EPackageImpl implements BoxesPackage {
 		boxEClass = createEClass(BOX);
 		createEAttribute(boxEClass, BOX__NAME);
 		createEReference(boxEClass, BOX__PORTS);
-		createEReference(boxEClass, BOX__CONNECTIONS);
 		createEReference(boxEClass, BOX__BOX_INSTANCES);
 
 		portEClass = createEClass(PORT);
@@ -273,6 +272,7 @@ public class BoxesPackageImpl extends EPackageImpl implements BoxesPackage {
 		boxInstanceEClass = createEClass(BOX_INSTANCE);
 		createEAttribute(boxInstanceEClass, BOX_INSTANCE__INSTANCE_NAME);
 		createEReference(boxInstanceEClass, BOX_INSTANCE__BOX_REF);
+		createEReference(boxInstanceEClass, BOX_INSTANCE__CONNECTIONS);
 	}
 
 	/**
@@ -308,7 +308,6 @@ public class BoxesPackageImpl extends EPackageImpl implements BoxesPackage {
 		initEClass(boxEClass, Box.class, "Box", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBox_Name(), ecorePackage.getEString(), "name", null, 1, 1, Box.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBox_Ports(), this.getPort(), null, "ports", null, 0, -1, Box.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBox_Connections(), this.getConnection(), null, "connections", null, 0, -1, Box.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBox_BoxInstances(), this.getBoxInstance(), null, "boxInstances", null, 0, -1, Box.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -321,6 +320,7 @@ public class BoxesPackageImpl extends EPackageImpl implements BoxesPackage {
 		initEClass(boxInstanceEClass, BoxInstance.class, "BoxInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoxInstance_InstanceName(), ecorePackage.getEString(), "instanceName", null, 0, 1, BoxInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBoxInstance_BoxRef(), this.getBox(), null, "boxRef", null, 1, 1, BoxInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoxInstance_Connections(), this.getConnection(), null, "connections", null, 0, -1, BoxInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

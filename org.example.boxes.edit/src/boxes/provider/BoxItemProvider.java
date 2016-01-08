@@ -103,7 +103,6 @@ public class BoxItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BoxesPackage.Literals.BOX__PORTS);
-			childrenFeatures.add(BoxesPackage.Literals.BOX__CONNECTIONS);
 			childrenFeatures.add(BoxesPackage.Literals.BOX__BOX_INSTANCES);
 		}
 		return childrenFeatures;
@@ -164,7 +163,6 @@ public class BoxItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case BoxesPackage.BOX__PORTS:
-			case BoxesPackage.BOX__CONNECTIONS:
 			case BoxesPackage.BOX__BOX_INSTANCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -187,11 +185,6 @@ public class BoxItemProvider
 			(createChildParameter
 				(BoxesPackage.Literals.BOX__PORTS,
 				 BoxesFactory.eINSTANCE.createPort()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BoxesPackage.Literals.BOX__CONNECTIONS,
-				 BoxesFactory.eINSTANCE.createConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter

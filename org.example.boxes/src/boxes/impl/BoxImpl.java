@@ -5,22 +5,15 @@ package boxes.impl;
 import boxes.Box;
 import boxes.BoxInstance;
 import boxes.BoxesPackage;
-import boxes.Connection;
 import boxes.Port;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,7 +26,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link boxes.impl.BoxImpl#getName <em>Name</em>}</li>
  *   <li>{@link boxes.impl.BoxImpl#getPorts <em>Ports</em>}</li>
- *   <li>{@link boxes.impl.BoxImpl#getConnections <em>Connections</em>}</li>
  *   <li>{@link boxes.impl.BoxImpl#getBoxInstances <em>Box Instances</em>}</li>
  * </ul>
  * </p>
@@ -70,16 +62,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 	 * @ordered
 	 */
 	protected EList<Port> ports;
-
-	/**
-	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConnections()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Connection> connections;
 
 	/**
 	 * The cached value of the '{@link #getBoxInstances() <em>Box Instances</em>}' containment reference list.
@@ -148,18 +130,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Connection> getConnections() {
-		if (connections == null) {
-			connections = new EObjectContainmentEList<Connection>(Connection.class, this, BoxesPackage.BOX__CONNECTIONS);
-		}
-		return connections;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<BoxInstance> getBoxInstances() {
 		if (boxInstances == null) {
 			boxInstances = new EObjectContainmentEList<BoxInstance>(BoxInstance.class, this, BoxesPackage.BOX__BOX_INSTANCES);
@@ -177,8 +147,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 		switch (featureID) {
 			case BoxesPackage.BOX__PORTS:
 				return ((InternalEList<?>)getPorts()).basicRemove(otherEnd, msgs);
-			case BoxesPackage.BOX__CONNECTIONS:
-				return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
 			case BoxesPackage.BOX__BOX_INSTANCES:
 				return ((InternalEList<?>)getBoxInstances()).basicRemove(otherEnd, msgs);
 		}
@@ -197,8 +165,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 				return getName();
 			case BoxesPackage.BOX__PORTS:
 				return getPorts();
-			case BoxesPackage.BOX__CONNECTIONS:
-				return getConnections();
 			case BoxesPackage.BOX__BOX_INSTANCES:
 				return getBoxInstances();
 		}
@@ -220,10 +186,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 			case BoxesPackage.BOX__PORTS:
 				getPorts().clear();
 				getPorts().addAll((Collection<? extends Port>)newValue);
-				return;
-			case BoxesPackage.BOX__CONNECTIONS:
-				getConnections().clear();
-				getConnections().addAll((Collection<? extends Connection>)newValue);
 				return;
 			case BoxesPackage.BOX__BOX_INSTANCES:
 				getBoxInstances().clear();
@@ -247,9 +209,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 			case BoxesPackage.BOX__PORTS:
 				getPorts().clear();
 				return;
-			case BoxesPackage.BOX__CONNECTIONS:
-				getConnections().clear();
-				return;
 			case BoxesPackage.BOX__BOX_INSTANCES:
 				getBoxInstances().clear();
 				return;
@@ -269,8 +228,6 @@ public class BoxImpl extends MinimalEObjectImpl.Container implements Box {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BoxesPackage.BOX__PORTS:
 				return ports != null && !ports.isEmpty();
-			case BoxesPackage.BOX__CONNECTIONS:
-				return connections != null && !connections.isEmpty();
 			case BoxesPackage.BOX__BOX_INSTANCES:
 				return boxInstances != null && !boxInstances.isEmpty();
 		}

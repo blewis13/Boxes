@@ -179,10 +179,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:17:7: ( 'connections' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:17:9: 'connections'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:17:7: ( 'Port' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:17:9: 'Port'
             {
-            match("connections"); 
+            match("Port"); 
 
 
             }
@@ -200,10 +200,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:18:7: ( 'Port' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:18:9: 'Port'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:18:7: ( 'Connection' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:18:9: 'Connection'
             {
-            match("Port"); 
+            match("Connection"); 
 
 
             }
@@ -221,10 +221,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:19:7: ( 'Connection' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:19:9: 'Connection'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:19:7: ( 'intPorts' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:19:9: 'intPorts'
             {
-            match("Connection"); 
+            match("intPorts"); 
 
 
             }
@@ -242,11 +242,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:20:7: ( 'intPorts' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:20:9: 'intPorts'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:20:7: ( '(' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:20:9: '('
             {
-            match("intPorts"); 
-
+            match('('); 
 
             }
 
@@ -263,10 +262,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:21:7: ( '(' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:21:9: '('
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:21:7: ( ')' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:21:9: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -283,10 +282,11 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:22:7: ( ')' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:22:9: ')'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:22:7: ( 'extPorts' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:22:9: 'extPorts'
             {
-            match(')'); 
+            match("extPorts"); 
+
 
             }
 
@@ -303,10 +303,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:23:7: ( 'extPorts' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:23:9: 'extPorts'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:23:7: ( 'BoxInstance' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:23:9: 'BoxInstance'
             {
-            match("extPorts"); 
+            match("BoxInstance"); 
 
 
             }
@@ -324,10 +324,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:24:7: ( 'BoxInstance' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:24:9: 'BoxInstance'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:24:7: ( 'boxRef' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:24:9: 'boxRef'
             {
-            match("BoxInstance"); 
+            match("boxRef"); 
 
 
             }
@@ -345,10 +345,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:25:7: ( 'boxRef' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:25:9: 'boxRef'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:25:7: ( 'instanceName' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:25:9: 'instanceName'
             {
-            match("boxRef"); 
+            match("instanceName"); 
 
 
             }
@@ -366,10 +366,10 @@ public class InternalBoxesDslLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:26:7: ( 'instanceName' )
-            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:26:9: 'instanceName'
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:26:7: ( 'connections' )
+            // ../org.xtext.example.boxes.ui/src-gen/org/xtext/example/boxes/ui/contentassist/antlr/internal/InternalBoxesDsl.g:26:9: 'connections'
             {
-            match("instanceName"); 
+            match("connections"); 
 
 
             }
@@ -1081,19 +1081,19 @@ public class InternalBoxesDslLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\30\2\uffff\1\30\1\uffff\5\30\2\uffff\1\30\1\uffff\1\26\2\uffff\3\26\2\uffff\1\30\3\uffff\1\30\1\uffff\5\30\2\uffff\1\30\6\uffff\1\65\11\30\1\uffff\4\30\1\104\5\30\1\112\3\30\1\uffff\5\30\1\uffff\1\30\1\124\7\30\1\uffff\11\30\1\145\1\30\1\147\4\30\1\uffff\1\30\1\uffff\3\30\1\160\1\30\1\162\1\30\1\164\1\uffff\1\30\1\uffff\1\166\1\uffff\1\167\2\uffff";
+        "\1\uffff\1\30\2\uffff\1\30\1\uffff\4\30\2\uffff\2\30\1\uffff\1\26\2\uffff\3\26\2\uffff\1\30\3\uffff\1\30\1\uffff\4\30\2\uffff\2\30\6\uffff\1\65\11\30\1\uffff\3\30\1\103\6\30\1\112\2\30\1\uffff\6\30\1\uffff\1\30\1\124\7\30\1\uffff\10\30\1\144\1\30\1\146\4\30\1\uffff\1\30\1\uffff\3\30\1\157\2\30\1\162\1\30\1\uffff\1\30\1\165\1\uffff\1\166\1\167\3\uffff";
     static final String DFA12_eofS =
         "\170\uffff";
     static final String DFA12_minS =
-        "\1\0\1\157\2\uffff\1\157\1\uffff\4\157\1\156\2\uffff\1\170\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\170\3\uffff\1\162\1\uffff\1\170\1\156\1\162\1\156\1\163\2\uffff\1\164\6\uffff\1\60\1\164\1\111\1\156\1\164\1\156\1\120\1\164\1\120\1\156\1\uffff\1\163\1\156\2\145\1\60\1\145\1\157\1\141\1\157\1\163\1\60\1\163\1\146\1\143\1\uffff\1\143\1\162\1\156\1\162\1\164\1\uffff\1\164\1\60\3\164\1\143\1\164\2\141\1\uffff\2\151\1\163\1\145\1\163\2\156\2\157\1\60\1\116\1\60\2\143\2\156\1\uffff\1\141\1\uffff\2\145\1\163\1\60\1\155\1\60\1\163\1\60\1\uffff\1\145\1\uffff\1\60\1\uffff\1\60\2\uffff";
+        "\1\0\1\157\2\uffff\1\157\1\uffff\3\157\1\156\2\uffff\1\170\1\157\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\170\3\uffff\1\162\1\uffff\1\170\1\162\1\156\1\163\2\uffff\1\164\1\156\6\uffff\1\60\1\164\1\111\1\164\1\156\1\120\1\164\1\120\2\156\1\uffff\1\163\1\156\1\145\1\60\1\145\1\157\1\141\1\157\1\145\1\163\1\60\1\163\1\146\1\uffff\1\143\1\162\1\156\1\162\1\143\1\164\1\uffff\1\164\1\60\2\164\1\143\2\164\2\141\1\uffff\1\151\1\163\1\145\1\163\1\151\2\156\1\157\1\60\1\116\1\60\1\157\2\143\1\156\1\uffff\1\141\1\uffff\1\156\2\145\1\60\1\155\1\163\1\60\1\163\1\uffff\1\145\1\60\1\uffff\2\60\3\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\157\2\uffff\1\157\1\uffff\4\157\1\156\2\uffff\1\170\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\170\3\uffff\1\162\1\uffff\1\170\1\156\1\162\1\156\1\164\2\uffff\1\164\6\uffff\1\172\1\164\1\122\1\156\1\164\1\156\1\120\1\164\1\120\1\156\1\uffff\1\163\1\156\2\145\1\172\1\145\1\157\1\141\1\157\1\163\1\172\1\163\1\146\1\143\1\uffff\1\143\1\162\1\156\1\162\1\164\1\uffff\1\164\1\172\3\164\1\143\1\164\2\141\1\uffff\2\151\1\163\1\145\1\163\2\156\2\157\1\172\1\116\1\172\2\143\2\156\1\uffff\1\141\1\uffff\2\145\1\163\1\172\1\155\1\172\1\163\1\172\1\uffff\1\145\1\uffff\1\172\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\157\2\uffff\1\157\1\uffff\3\157\1\156\2\uffff\1\170\1\157\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\170\3\uffff\1\162\1\uffff\1\170\1\162\1\156\1\164\2\uffff\1\164\1\156\6\uffff\1\172\1\164\1\122\1\164\1\156\1\120\1\164\1\120\2\156\1\uffff\1\163\1\156\1\145\1\172\1\145\1\157\1\141\1\157\1\145\1\163\1\172\1\163\1\146\1\uffff\1\143\1\162\1\156\1\162\1\143\1\164\1\uffff\1\164\1\172\2\164\1\143\2\164\2\141\1\uffff\1\151\1\163\1\145\1\163\1\151\2\156\1\157\1\172\1\116\1\172\1\157\2\143\1\156\1\uffff\1\141\1\uffff\1\156\2\145\1\172\1\155\1\163\1\172\1\163\1\uffff\1\145\1\172\1\uffff\2\172\3\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\3\1\uffff\1\5\5\uffff\1\13\1\14\1\uffff\1\21\1\uffff\1\22\1\23\3\uffff\1\27\1\30\1\uffff\1\22\1\2\1\3\1\uffff\1\5\5\uffff\1\13\1\14\1\uffff\1\21\1\23\1\24\1\25\1\26\1\27\12\uffff\1\1\16\uffff\1\10\5\uffff\1\4\11\uffff\1\17\20\uffff\1\12\1\uffff\1\15\10\uffff\1\11\1\uffff\1\16\1\uffff\1\7\1\uffff\1\6\1\20";
+        "\2\uffff\1\2\1\3\1\uffff\1\5\4\uffff\1\12\1\13\2\uffff\1\21\1\uffff\1\22\1\23\3\uffff\1\27\1\30\1\uffff\1\22\1\2\1\3\1\uffff\1\5\4\uffff\1\12\1\13\2\uffff\1\21\1\23\1\24\1\25\1\26\1\27\12\uffff\1\1\15\uffff\1\7\6\uffff\1\4\11\uffff\1\16\17\uffff\1\11\1\uffff\1\14\10\uffff\1\10\2\uffff\1\15\2\uffff\1\20\1\6\1\17";
     static final String DFA12_specialS =
-        "\1\0\21\uffff\1\2\1\1\144\uffff}>";
+        "\1\2\21\uffff\1\1\1\0\144\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\1\13\1\14\2\26\1\5\1\26\1\16\1\24\12\21\7\26\1\20\1\1\1\11\14\20\1\10\12\20\3\26\1\17\1\20\1\26\1\20\1\6\1\7\1\20\1\15\3\20\1\12\6\20\1\4\12\20\1\2\1\26\1\3\uff82\26",
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\1\12\1\13\2\26\1\5\1\26\1\16\1\24\12\21\7\26\1\20\1\1\1\10\14\20\1\7\12\20\3\26\1\17\1\20\1\26\1\20\1\6\1\15\1\20\1\14\3\20\1\11\6\20\1\4\12\20\1\2\1\26\1\3\uff82\26",
             "\1\27",
             "",
             "",
@@ -1103,9 +1103,9 @@ public class InternalBoxesDslLexer extends Lexer {
             "\1\36",
             "\1\37",
             "\1\40",
-            "\1\41",
             "",
             "",
+            "\1\43",
             "\1\44",
             "",
             "\32\30\4\uffff\1\30\1\uffff\32\30",
@@ -1125,10 +1125,10 @@ public class InternalBoxesDslLexer extends Lexer {
             "\1\55",
             "\1\56",
             "\1\57",
-            "\1\60",
-            "\1\62\1\61",
+            "\1\61\1\60",
             "",
             "",
+            "\1\62",
             "\1\63",
             "",
             "",
@@ -1150,8 +1150,8 @@ public class InternalBoxesDslLexer extends Lexer {
             "\1\100",
             "\1\101",
             "\1\102",
-            "\1\103",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\104",
             "\1\105",
             "\1\106",
             "\1\107",
@@ -1160,8 +1160,8 @@ public class InternalBoxesDslLexer extends Lexer {
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\113",
             "\1\114",
-            "\1\115",
             "",
+            "\1\115",
             "\1\116",
             "\1\117",
             "\1\120",
@@ -1186,31 +1186,31 @@ public class InternalBoxesDslLexer extends Lexer {
             "\1\141",
             "\1\142",
             "\1\143",
-            "\1\144",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\1\146",
+            "\1\145",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\147",
             "\1\150",
             "\1\151",
             "\1\152",
+            "",
             "\1\153",
             "",
             "\1\154",
-            "",
             "\1\155",
             "\1\156",
-            "\1\157",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\160",
             "\1\161",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\163",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
-            "\1\165",
-            "",
+            "\1\164",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "",
             "",
             ""
     };
@@ -1252,6 +1252,26 @@ public class InternalBoxesDslLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_19 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 39;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_18 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 39;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1267,19 +1287,19 @@ public class InternalBoxesDslLexer extends Lexer {
 
                         else if ( (LA12_0=='b') ) {s = 6;}
 
-                        else if ( (LA12_0=='c') ) {s = 7;}
+                        else if ( (LA12_0=='P') ) {s = 7;}
 
-                        else if ( (LA12_0=='P') ) {s = 8;}
+                        else if ( (LA12_0=='C') ) {s = 8;}
 
-                        else if ( (LA12_0=='C') ) {s = 9;}
+                        else if ( (LA12_0=='i') ) {s = 9;}
 
-                        else if ( (LA12_0=='i') ) {s = 10;}
+                        else if ( (LA12_0=='(') ) {s = 10;}
 
-                        else if ( (LA12_0=='(') ) {s = 11;}
+                        else if ( (LA12_0==')') ) {s = 11;}
 
-                        else if ( (LA12_0==')') ) {s = 12;}
+                        else if ( (LA12_0=='e') ) {s = 12;}
 
-                        else if ( (LA12_0=='e') ) {s = 13;}
+                        else if ( (LA12_0=='c') ) {s = 13;}
 
                         else if ( (LA12_0=='.') ) {s = 14;}
 
@@ -1298,26 +1318,6 @@ public class InternalBoxesDslLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='+')||LA12_0=='-'||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 22;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_19 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 39;}
-
-                        else s = 22;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_18 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 39;}
-
-                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;

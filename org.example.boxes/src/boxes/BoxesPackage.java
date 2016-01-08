@@ -85,22 +85,13 @@ public interface BoxesPackage extends EPackage {
 	int BOX__PORTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOX__CONNECTIONS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Box Instances</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOX__BOX_INSTANCES = 3;
+	int BOX__BOX_INSTANCES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Box</em>' class.
@@ -109,7 +100,7 @@ public interface BoxesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOX_FEATURE_COUNT = 4;
+	int BOX_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Box</em>' class.
@@ -232,13 +223,22 @@ public interface BoxesPackage extends EPackage {
 	int BOX_INSTANCE__BOX_REF = 1;
 
 	/**
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOX_INSTANCE__CONNECTIONS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Box Instance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOX_INSTANCE_FEATURE_COUNT = 2;
+	int BOX_INSTANCE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Box Instance</em>' class.
@@ -281,17 +281,6 @@ public interface BoxesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBox_Ports();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link boxes.Box#getConnections <em>Connections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Connections</em>'.
-	 * @see boxes.Box#getConnections()
-	 * @see #getBox()
-	 * @generated
-	 */
-	EReference getBox_Connections();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link boxes.Box#getBoxInstances <em>Box Instances</em>}'.
@@ -390,6 +379,17 @@ public interface BoxesPackage extends EPackage {
 	EReference getBoxInstance_BoxRef();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link boxes.BoxInstance#getConnections <em>Connections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Connections</em>'.
+	 * @see boxes.BoxInstance#getConnections()
+	 * @see #getBoxInstance()
+	 * @generated
+	 */
+	EReference getBoxInstance_Connections();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -437,14 +437,6 @@ public interface BoxesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BOX__PORTS = eINSTANCE.getBox_Ports();
-
-		/**
-		 * The meta object literal for the '<em><b>Connections</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BOX__CONNECTIONS = eINSTANCE.getBox_Connections();
 
 		/**
 		 * The meta object literal for the '<em><b>Box Instances</b></em>' containment reference list feature.
@@ -523,6 +515,14 @@ public interface BoxesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BOX_INSTANCE__BOX_REF = eINSTANCE.getBoxInstance_BoxRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Connections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOX_INSTANCE__CONNECTIONS = eINSTANCE.getBoxInstance_Connections();
 
 	}
 
